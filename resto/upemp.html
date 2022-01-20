@@ -1,0 +1,72 @@
+{% extends 'adminbase.html' %}
+
+{%  block title %}
+Update Team
+{% endblock %}
+
+{%  block content %}
+
+<section id="gtco-reservation" class="bg-fixed bg-white section-padding overlay"
+    style="background-image: url(static/img/reservation-bg.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="section-content bg-white p-5 shadow">
+                    <div class="heading-section text-center">
+
+                        <h2>
+                            Update Employee
+                        </h2>
+                    </div>
+                    <form class="form-group" method="POST" action="/adminupteam/{{ emp_to_update.emp_id }}" name="contact-us">
+                        {{  form.hidden_tag() }}
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                {{  form.empname(class="form-control" , placeholder="Name") }}
+                            </div>
+                            <div class="col-md-12 form-group">
+                                {{  form.empdesg(class="form-control" , placeholder="Designation" ) }}
+                            </div>
+                            <div class="col-md-12 form-group">
+                                {{  form.empphno(class="form-control" , placeholder="Phone Number" ) }}
+                            </div>
+                            <div class="col-md-12 form-group">
+                                {{  form.empsalary(class="form-control" , placeholder="Salary" ) }}
+                            </div>
+                            <div class="col-md-12 form-group">
+                                {{  form.empaddress(class="form-control" , placeholder="Address" ) }}
+                            </div>
+                            <div class="col-md-12 text-center">
+                                {{ form.submit(class="btn btn-primary btn-shadow btn-lg")   }}
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+    thead {
+        color: rgb(0, 0, 0);
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid rgb(255, 255, 255);
+        text-align: center;
+    }
+
+    td {
+        text-align: center;
+    }
+</style>
+
+
+{% endblock %}

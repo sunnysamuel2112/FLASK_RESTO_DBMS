@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{%  block title %}
+Reservation
+{% endblock %}
+
+{%  block content %}
+
+
+
+
+
+
+
+
+
+
+
+<body>
+    <h1 align="center">
+
+        ENTER DETAILS OF RESERVATION:
+
+    </h1>
+
+    <div>
+        <div align="center" class="container">
+            <table>
+                <form method="POST" class="form-register" style="color:rgb(143, 53, 53)">
+                    {{  form.hidden_tag() }}
+                    <tr>
+
+                        <td>
+                            {{  form.customername(class="form-control", placeholder="Name")  }}
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+
+                        <td>
+                            {{  form.customeremail(class="form-control", placeholder="E-mail")  }}
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>
+                            {{  form.customerphno(class="form-control", placeholder="Phone Number")  }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <br>
+                        <td>
+                            <div class=" form-register">
+                                <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                                    {{  form.reservedate(class="form-control", placeholder="yyyy-mm-dd")  }}
+
+                                    <div class="input-group-append" data-target="#datetimepicker4"
+                                        data-toggle="datetimepicker">
+                                        <!-- <div class="input-group-text">
+                                            <span class="lnr lnr-calendar-full"></span>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+<br>
+                    <tr>
+                        <td>
+                            <div class=" form-group">
+                                <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+                                    {{  form.reservetime(class="form-control", placeholder="yyyy-mm-dd")  }}
+                                    <div class="input-group-append" data-target="#datetimepicker3"
+                                        data-toggle="datetimepicker">
+                                        <!-- <div class="input-group-text">
+                                            <span class="lnr lnr-clock"></span>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+<br>
+                    <tr>
+                        <td>
+                            {{  form.reserveheadcount(class="form-control", placeholder="Head Count")  }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            {{  form.reservecontent(class="form-control", placeholder="content")  }}
+                        </td>
+                    </tr>
+
+<br>
+                    <tr align="center">
+                        <td>
+                            <br>
+                            {{ form.reservesubmit(class="btn btn-lg btn-block btn-primary")   }}
+                        </td>
+                    </tr>
+
+
+
+
+
+
+                </form>
+            </table>
+
+        </div>
+
+
+    </div>
+</body>
+<style>
+    thead {
+        color: rgb(0, 0, 0);
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid rgb(255, 255, 255);
+        text-align: center;
+
+    }
+
+    td {
+        text-align: center;
+    }
+</style>
+
+{%  endblock %}
