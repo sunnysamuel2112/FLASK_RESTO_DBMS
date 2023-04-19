@@ -5,17 +5,17 @@ from flask import Flask, render_template, redirect, url_for
 from resto.models import user, order, menu, reserve, emp, customer
 from resto.forms import addEmpForm, loginForm, menuForm, RegisterForm, reservationForm, AddDishForm, updateEmpForm, updatedishForm
 from resto import db
-from flask_mail import Mail, Message
+# from flask_mail import Mail, Message
 
-# mailservice
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USE_TLS'] = False
-app.config['MAIL_USERNAME'] = 'restofoodservice@gmail.com'
-app.config['MAIL_PASSWORD'] = 'resto@2000'
+# # mailservice
+# app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+# app.config['MAIL_PORT'] = 465
+# app.config['MAIL_USE_SSL'] = True
+# app.config['MAIL_USE_TLS'] = False
+# app.config['MAIL_USERNAME'] = 'restofoodservice@gmail.com'
+# app.config['MAIL_PASSWORD'] = 'resto@2000'
 
-mail = Mail(app)
+# mail = Mail(app)
 
 
 # route file
