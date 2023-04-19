@@ -111,12 +111,12 @@ def registerpage():
         db.session.add(user1)
         db.session.add(newcust)
         db.session.commit()
-        message = 'Thank you for Registering\nHere is your Login Credentials:\nUsername: %s\nPassword: %s\nLogin using these credentials\nWe hope you eat to your heart\'s content!!!!\n\n\n\nfor further info contact us at 8970514735,\nThank You.' % (
-            form.username.data, form.password.data)
-        subject = 'Hello from RESTO, %s' % form.username.data
-        msg = Message(body=message, subject=subject,
-                      sender='restofoodservice@gmail.com', recipients=[form.useremail.data])
-        mail.send(msg)
+        # message = 'Thank you for Registering\nHere is your Login Credentials:\nUsername: %s\nPassword: %s\nLogin using these credentials\nWe hope you eat to your heart\'s content!!!!\n\n\n\nfor further info contact us at 8970514735,\nThank You.' % (
+        #     form.username.data, form.password.data)
+        # subject = 'Hello from RESTO, %s' % form.username.data
+        # msg = Message(body=message, subject=subject,
+        #               sender='restofoodservice@gmail.com', recipients=[form.useremail.data])
+        # mail.send(msg)
         flash('registration succesfull', category="success")
         return redirect(url_for('menucust'))
     if form.errors != {}:
